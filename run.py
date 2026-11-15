@@ -6,6 +6,8 @@ import logging
 import os
 import sys
 
+from dotenv import load_dotenv
+
 from bot.application import build_application, configure_logging
 from bot.config import ConfigError, Settings
 
@@ -14,6 +16,7 @@ LOGGER = logging.getLogger("run")
 
 def main() -> int:
     """Start the bot. Returns a process exit code."""
+    load_dotenv()
     configure_logging(os.getenv("LOG_LEVEL", "INFO").upper())
 
     LOGGER.info(
@@ -23,7 +26,7 @@ def main() -> int:
     )
 
     try:
-        settings = Settings.from_env()
+        settings = Settings.from_env(load_dotenv_file=False)
     except ConfigError as exc:
         LOGGER.error("Configuration problem: %s", exc)
         return 1

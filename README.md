@@ -176,34 +176,3 @@ The tests check that each chat keeps its own history, that history is trimmed to
 the last N messages, that Urdu text round-trips through JSON unchanged, that
 `/reset` clears only the target chat, that a corrupted history file does not
 crash the bot, and that a missing key produces a clear error.
-
-## Screenshots
-
-> Replace each placeholder below with your own screenshot. Save the image files
-> in a `screenshots/` folder next to this README, then the links will work.
-
-### 1. A normal conversation (with a follow-up question)
-
-![Conversation with the bot](screenshots/01-conversation.png)
-
-### 2. The `/start` command
-
-![The /start greeting](screenshots/02-start.png)
-
-### 3. `/reset` — before and after, showing the bot forgot
-
-![Before and after /reset](screenshots/03-reset.png)
-
-### 4. The terminal showing the token and cost logs
-
-![Token logs in the terminal](screenshots/04-token-logs.png)
-
-## Notes on secrets
-
-- `.env` is gitignored and no key is ever written to a log. On startup the bot
-  logs only *whether* each secret was found (`TELEGRAM_BOT_TOKEN=True`), never
-  the value.
-- `data/` is gitignored too, because conversation histories contain real
-  messages.
-- Before pushing, run `git status` and make sure neither `.env` nor
-  `data/telegram_histories.json` appears in the list.
