@@ -176,3 +176,12 @@ The tests check that each chat keeps its own history, that history is trimmed to
 the last N messages, that Urdu text round-trips through JSON unchanged, that
 `/reset` clears only the target chat, that a corrupted history file does not
 crash the bot, and that a missing key produces a clear error.
+
+## Screenshots
+
+> Replace each placeholder below with your own screenshot. Save the image files
+> in a `screenshots/` folder next to this README, then the links will work.
+
+### 1. A normal conversation (with a follow-up question)
+
+![Conversation with the bot](screenshots/01-conversation.png)
