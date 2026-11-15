@@ -184,4 +184,4 @@ crash the bot, and that a missing key produces a clear error.
 
 ### 1. A normal conversation (with a follow-up question)
 
-![Conversation with the bot](screenshots/01-conversation.png)
+![Conversation with the bot](screenshots/01-conversation.jpeg)
